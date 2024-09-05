@@ -1,5 +1,8 @@
 package com.grafrank.controller;
 
+import com.grafrank.model.User;
+import com.grafrank.model.Account;
+import com.grafrank.model.Admin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +15,16 @@ import java.util.List;
 public class UserController {
     private List<String> users = new ArrayList<>();
     @GetMapping
-    public List<String> getAllUsers() {
+    public List<User> getAllUsers() {
+        List<User> users = new ArrayList<>();
+
+        Admin john = new Admin();
+        Account jane = new Account();
+        jane.setUsername("janey");
+
+        users.add(john);
+        users.add(jane);
+
         return users;
     }
     @PostMapping
