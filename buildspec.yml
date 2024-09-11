@@ -9,9 +9,10 @@ phases:
       - cd src/main/angular/grafrank
       - npm install
   pre_build:
-    - npm i -g @angular/cli
-    - npm i -g typescript
-    - echo "install nodejs"
+    commands:
+      - npm i -g @angular/cli
+      - npm i -g typescript
+      - echo "install nodejs"
   build:
     commands:
       - ng build --prod
