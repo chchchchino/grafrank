@@ -16,7 +16,8 @@ phases:
   build:
     commands:
       - ng build
-      - cd ../../../
+      - cd ../../../../
+      - pwd
       - mvn clean install
   post_build:
     commands:
