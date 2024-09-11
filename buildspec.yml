@@ -15,7 +15,7 @@ phases:
       - echo "install nodejs"
   build:
     commands:
-      - ng build --prod
+      - ng build
       - cd ../../../
       - mvn clean install
   post_build:
