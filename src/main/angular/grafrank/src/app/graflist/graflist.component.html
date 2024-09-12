@@ -1,0 +1,18 @@
+<h2>My Graffiti</h2>
+<ul class="heroes">
+  <li *ngFor="let graf of grafs">
+    <button [class.selected]="graf === selectedGraf" type="button" (click)="onSelect(graf)">
+      <span class="badge">{{graf.id}}</span>
+      <span class="name">{{graf.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="selectedGraf">
+  <h2>{{selectedGraf.name | uppercase}} Details</h2>
+  <div>id: {{selectedGraf.id}}</div>
+  <div>
+    <label for="hero-name">Graf name: </label>
+    <input id="hero-name" [(ngModel)]="selectedGraf.name" placeholder="name">
+  </div>
+</div>
