@@ -30,11 +30,15 @@ public class GrafController {
         Art art5 = new Art();
         art5.setId(5);
         art5.setName("No Letters");
+        Art art6 = new Art();
+        art6.setId(6);
+        art6.setName("Landscape Art");
         arts.add(art1);
         arts.add(art2);
         arts.add(art3);
         arts.add(art4);
         arts.add(art5);
+        arts.add(art6);
         return arts;
     }
 }
